@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -325,6 +356,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Britain had long stayed out of European alliances, relying on its navy. But Germany now wanted a navy too. From 1898 Admiral Tirpitz pushed laws through the German parliament to build a battle fleet. To Britain, which lived on imported food and trade, a strong German fleet seemed a threat to its survival. In 1906 Britain launched HMS Dreadnought, a battleship so powerful that it made older ships obsolete, and both nations raced to build more <span class="gloss" tabindex="0"><strong>dreadnoughts</strong><button class="gloss-audio" onclick="speakGloss(event,'DRED-nawt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DRED-nawt</span>A modern battleship with heavy guns of one large size, first built by Britain in 1906. The name also came to mean any battleship of that kind. <a class="om-maplink" href="#gloss-dreadnought">See the glossary box.</a></span></span>.</p>
 <p style="margin:0 0 14px;">Britain looked for friends. In 1904 it reached an <span class="gloss" tabindex="0"><em>entente</em><button class="gloss-audio" onclick="speakGloss(event,'ahn-TAHNT')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ahn-TAHNT</span>A French word meaning "understanding." It names a friendly agreement between nations that is less formal than a treaty of alliance. <a class="om-maplink" href="#gloss-entente">See the glossary box.</a></span></span>, an understanding, with France, and in 1907 another with Russia. Together with the Franco-Russian alliance, they formed the Triple Entente. Europe was now divided into two armed camps: Germany, Austria-Hungary, and Italy on one side, and France, Russia, and Britain on the other. Italy would later change its mind. Crises came and went, as in Morocco in 1905 and 1911, and each one left both sides more suspicious.</p>
+<div class="optima-widget ow-reflect" data-wid="w31-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">By 1907 Europe stood in two armed camps. Which step on the way there seems most avoidable to you? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Russia and France had little in common but fear of Germany, and once the treaty lapsed they drew together. Notice how one choice by a few people left Germany with enemies on both sides.">Letting Germany&#x27;s ties with Russia lapse</button><button data-response="Britain saw a threat to its survival and looked for friends. A step one side saw as ordinary strength looked to the other like danger.">Germany building a battle fleet</button><button data-response="For Britain this was a way to feel safer. For Germany it looked like a ring closing, and each side&#x27;s caution made the other more suspicious.">Britain making friends with France and Russia</button><button data-response="Some historians feel that way. Yet each step was chosen by particular people, and later in the lesson you will look for the moments when they might have chosen differently.">None of them; the camps were hard to avoid</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -339,6 +372,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE BALKAN POWDER KEG</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">The spark would come from the Balkans, where the Ottoman Empire was losing ground. Serbia, a small kingdom that dreamed of uniting all the South Slavs, was growing stronger and was backed by Russia. Austria-Hungary, which ruled millions of Slavs, feared that Serbia would pull its empire apart. In 1908 Austria annexed Bosnia, which angered Serbia. The Balkan Wars of 1912 and 1913 almost doubled Serbia's size. Austria's leaders wanted to crush Serbia, but they feared Russia.</p>
+<div class="optima-widget ow-select" data-wid="w31-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; Who feared what?</div><div class="widget-question">For each item, choose the answer that fits the lesson.</div><div class="widget-row" data-correct="3" data-fb="Right. Britain depended on the sea for food and trade, so a strong German fleet seemed a threat to its survival." data-hint="Think about what Britain had to bring in by sea."><div class="widget-row-prompt">1. 1. Why did Britain watch the German fleet so closely?</div><div class="widget-options"><button data-choice="0">It wanted to copy German ship designs.</button><button data-choice="1">It had no navy of its own and relied on allies.</button><button data-choice="2">It feared the fleet would be used against Serbia.</button><button data-choice="3">It lived on imported food and trade, so a rival fleet threatened its survival.</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. A stronger Serbia might pull the empire apart, and Serbia was backed by Russia." data-hint="Think about who lived inside Austria-Hungary&#x27;s borders."><div class="widget-row-prompt">2. 2. Why did Austria-Hungary fear a stronger Serbia?</div><div class="widget-options"><button data-choice="0">Serbia dreamed of uniting the South Slavs, and Austria ruled millions of Slavs.</button><button data-choice="1">Serbia had been given Bosnia by the great powers.</button><button data-choice="2">Serbia was backed by Italy.</button><button data-choice="3">Serbia&#x27;s army had already crossed into Austria.</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. Few expected a long war, and many young men, raised on stories of glory, were eager." data-hint="Think about how people felt about war before it began."><div class="widget-row-prompt">3. 3. What did most people expect of a war in 1914?</div><div class="widget-options"><button data-choice="0">That it would last four years.</button><button data-choice="1">That it would be over by Christmas.</button><button data-choice="2">That Britain would stay out of it.</button><button data-choice="3">That the fighting would stay in the Balkans.</button></div></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -353,6 +388,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Austria's leaders saw their chance to deal with Serbia. On July 5 and 6 they asked Germany for support, and Kaiser Wilhelm promised it. This promise is often called the blank check. On July 23 Austria sent Serbia an <span class="gloss" tabindex="0"><strong>ultimatum</strong><button class="gloss-audio" onclick="speakGloss(event,'ul-tuh-MAY-tum')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ul-tuh-MAY-tum</span>A final demand, backed by a threat of force if it is not met by a fixed time. <a class="om-maplink" href="#gloss-ultimatum">See the glossary box.</a></span></span> with demands designed to be hard to accept. Serbia agreed to nearly all of them, but Austria declared war on July 28.</p>
 <p style="margin:0 0 14px;">Then the alliances took over. Russia began to mobilize to protect Serbia. Tsar Nicholas II and his cousin Wilhelm exchanged anxious telegrams, which you will read this week, but their generals were already moving. On August 1 Germany declared war on Russia, and on August 3 on France. To carry out its plan, Germany invaded Belgium on August 4. Britain had promised in 1839 to defend Belgium's neutrality, and the next day it declared war on Germany.</p>
+<div class="ow-group" data-wid="w31-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">July 5 and 6: what did Austria ask of Germany?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Support. Wilhelm promised it, and that promise is often called the blank check.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How did Serbia answer Austria&#x27;s demands of July 23?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Serbia agreed to nearly all of them, but Austria declared war on July 28.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did Britain enter the war on August 5?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Germany invaded Belgium on August 4, and Britain had promised in 1839 to defend Belgium&#x27;s neutrality.</div></div><button class="widget-reset">Reset</button></div></div>
+
 <p style="margin:0 0 14px;">Within six weeks of the shooting, Europe was at war. At almost every step, someone could have chosen differently: Germany by restraining Austria, Austria by accepting Serbia's reply, Russia by waiting, Britain by speaking more clearly at the start. In this week's discussion you will weigh which of those choices mattered most.</p>
 </div>
     </div>
@@ -388,6 +425,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

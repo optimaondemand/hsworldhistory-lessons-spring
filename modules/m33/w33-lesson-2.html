@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -324,6 +355,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">On November 9 and 10, 1938, the Nazis used the shooting of a German diplomat in Paris by a young Jew as an excuse. Mobs, led by party members, burned synagogues, smashed shop windows, and beat and killed Jews. About ninety were murdered, and some thirty thousand Jewish men were sent to concentration camps. The event was named <span class="gloss" tabindex="0"><em>Kristallnacht</em><button class="gloss-audio" onclick="speakGloss(event,'KRIS-tahl-nahkht')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KRIS-tahl-nahkht</span>A German word meaning "night of broken glass." It names the attacks on Jews across Germany and Austria on November 9 and 10, 1938. <a class="om-maplink" href="#gloss-kristallnacht">See the glossary box.</a></span></span>. Afterward Jews were forced to pay for the damage, and the pressure to leave grew. About half of Germany's Jews did emigrate before the war began, but many countries, including the United States, limited the number they would admit.</p>
 <p style="margin:0 0 14px;">When Germany conquered Poland in 1939, it took in some three million Polish Jews, the largest Jewish community in Europe. The Germans forced them into crowded districts sealed by walls, each called a <span class="gloss" tabindex="0"><strong>ghetto</strong><button class="gloss-audio" onclick="speakGloss(event,'GET-oh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">GET-oh</span>A walled or fenced part of a city where a group of people is forced to live, cut off from the rest of the population. <a class="om-maplink" href="#gloss-ghetto">See the glossary box.</a></span></span>. The Warsaw ghetto held about 400,000 people in a few square miles. Hunger, cold, and disease killed tens of thousands, and the Germans meant them to.</p>
+<div class="optima-widget" data-wid="w33-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">It is the end of 1938. After the attacks of November 9 and 10, the pressure on Germany's Jews to leave has grown. Your country is deciding how many refugees from Germany it will admit.</div><details class="ow-reveal"><summary>Decide first, and jot your answer in your notebook: what would you weigh, and who bears the cost of each limit? Then open to compare.</summary><div class="ow-reveal-body">The lesson says that about half of Germany's Jews did leave before the war began, but that many countries, including the United States, limited the number they would admit. Officials who set those limits made a choice, and so did the citizens who might have pressed them to change it. Whatever you wrote, notice who was left waiting behind each limit. The lesson treats these limits as decisions made by people, with consequences for those who were turned away.</div></details><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -345,6 +378,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">A crime of this size needed many hands. Railway clerks, bureaucrats, police, soldiers, doctors, engineers, and businessmen all played a part. Many were not fanatics. Historians have studied police battalions of older, middle-class men who shot thousands of Jews at close range, and found that most of them did so even though they had been told they could step aside. Others saw what was happening and said nothing, out of fear, habit, or hate.</p>
 <p style="margin:0 0 14px;">Yet some resisted. In April 1943 starving Jewish fighters in the Warsaw ghetto rose up with a few smuggled pistols and homemade bombs and held out for almost a month. Jews also revolted at Treblinka and Sobibor. In Denmark, ordinary citizens helped ferry nearly all of the country's roughly seven thousand Jews to neutral Sweden in October 1943. In the French village of Le Chambon, villagers led by a Protestant pastor hid thousands of Jewish refugees. Individuals such as Raoul Wallenberg, a Swedish diplomat in Budapest, and Oskar Schindler, a German factory owner, saved many lives. Such rescuers were rare. The nations that fought Germany also made hard choices. Allied leaders did not bomb the rail lines to Auschwitz, though they had been told of the camp, and historians debate what was possible.</p>
+<div class="optima-widget ow-seq" data-wid="w33-2-2" data-ra-skip data-n="5" data-fb="That is the order the lesson gives: 1938, 1941, January 1942, April 1943, and October 1943." data-hint="The violence of 1938 came first. The two acts of resistance and rescue both came in 1943."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Tap these events in the order they happened, earliest first.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Mobs attack Jews across Germany and Austria</button><button data-pos="2">Special units begin shooting Jews in pits after the invasion of the Soviet Union</button><button data-pos="3">Officials meet at Wannsee to coordinate the Final Solution</button><button data-pos="4">Jewish fighters in Warsaw rise up against the Germans</button><button data-pos="5">Danish citizens ferry nearly all of Denmark&#x27;s Jews to Sweden</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -352,6 +387,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">As Allied armies advanced in 1945, they came upon the camps. Soviet troops reached Auschwitz in January. American and British troops entered Buchenwald, Dachau, and Bergen-Belsen in April. Soldiers who had thought they understood war were shaken by what they found: bodies stacked in the open, and survivors who were near death. General Eisenhower ordered local civilians to be brought to see the camps, and he invited journalists and members of Congress to witness them so that no one could say later that it had not happened.</p>
 <p style="margin:0 0 14px;">From November 1945 to October 1946, the Allies tried the surviving top Nazi leaders at Nuremberg. The court held that obeying orders was not a defense for crimes against humanity. Twelve defendants were sentenced to death, and several others received prison terms. Many smaller trials followed. A Polish-Jewish lawyer, Raphael Lemkin, who lost nearly his whole family in the Holocaust, had coined the word genocide in 1944, and the United Nations adopted a convention against the crime in 1948. The survivors, left homeless in many cases, faced the question of where they could go. You will see in a coming lesson how that question helped shape the creation of Israel.</p>
+<div class="optima-widget ow-scale" data-wid="w33-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW CERTAIN?</div><div class="widget-question">Allied leaders were told of Auschwitz but did not bomb the rail lines leading to it. How certain can we be about what bombing would have changed?</div><div class="widget-row" data-correct="2" data-fb="Fits the lesson. It says historians debate what was possible, and an honest answer admits that." data-hint="Reread what the lesson says about the debate among historians."><div class="widget-options"><button data-choice="0" data-fb="Too sure. The lesson says historians debate what was possible, so no one can claim certainty.">Certain it would have saved many lives</button><button data-choice="1" data-fb="Closer, but still more confident than the lesson allows. It says historians debate what was possible.">Fairly sure it would have helped</button><button data-choice="2" data-fb="Fits the lesson. It says historians debate what was possible, and an honest answer admits that.">Not certain, since historians debate what was possible</button><button data-choice="3" data-fb="Too sure in the other direction. The lesson says historians debate what was possible.">Certain it would have changed nothing</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Many Jews call these events the <span class="gloss" tabindex="0"><em>Shoah</em><button class="gloss-audio" onclick="speakGloss(event,'SHOH-uh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SHOH-uh</span>A Hebrew word meaning "catastrophe." Many Jews use it as the name for the murder of the Jews of Europe. <a class="om-maplink" href="#gloss-shoah">See the glossary box.</a></span></span>, and the term has been used to remember them. The Holocaust poses questions that history cannot fully answer. How can educated, modern people do such things? Historians point to the power of propaganda, the habits of obedience, fear, and the way that small steps led to larger ones. The answer is not comfortable, but it is a warning. Individuals made choices at every stage, and the habits of character that restrain cruelty, such as courage, honesty, and conscience, proved too rare to hold back what happened.</p>
 </div>
     </div>
@@ -388,6 +425,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

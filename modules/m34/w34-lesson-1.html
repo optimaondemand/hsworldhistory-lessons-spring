@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -307,6 +338,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="margin:0 0 14px;">The alliance of the United States, Britain, and the Soviet Union had been held together by one enemy. In February 1945, with the Red Army only a few dozen miles from Berlin, Roosevelt, Churchill, and Stalin met at Yalta in the Crimea. They agreed to divide Germany into zones of occupation and to hold free elections in the liberated countries of Eastern Europe. Stalin signed, but he had no intention of allowing free choice in lands his army had taken at so high a price. He wanted a ring of friendly states, for Russia had been invaded from the west three times in a century, and he trusted only governments he controlled.</p>
 <p style="margin:0 0 14px;">By 1946 Soviet-backed communists were taking power in Poland, Romania, Bulgaria, and Hungary, often through rigged elections, arrests, and threats. These countries became <span class="gloss" tabindex="0"><strong>satellite states</strong><button class="gloss-audio" onclick="speakGloss(event,'SAT-uh-lyt STAYT')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SAT-uh-lyt STAYT</span>A country that is officially independent but is actually controlled by a more powerful nation. <a class="om-maplink" href="#gloss-satellite-state">See the glossary box.</a></span></span>. In March 1946, in a speech at Fulton, Missouri, Winston Churchill, no longer prime minister, said that "an iron curtain has descended across the Continent." Stalin called him a warmonger. Yet the line he described was real. The two sides did not fight directly, so the contest was named the Cold War.</p>
 <p style="margin:0 0 14px;">Each side feared the other, and each had reasons. The Soviets remembered the German invasion that had killed some twenty-seven million of their people, and they saw Western strength as a threat. The Americans saw a government that ruled by force at home and appeared to seek more power abroad. Neither side could easily tell defense from aggression. A single misreading could harden suspicion into hostility, and in these years many did.</p>
+<div class="optima-widget ow-reflect" data-wid="w34-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Each side had reasons to fear the other. Which fear is easier for you to understand? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Some twenty-seven million Soviet people had died, and Russia had been invaded from the west three times in a century. Seen from Moscow, Western strength looked like a threat.">The Soviet memory of the German invasion</button><button data-response="Americans saw a government that held power by force at home and seemed to want more abroad. Seen from Washington, Soviet strength looked like a threat.">The American view of a government ruling by force</button><button data-response="The lesson says each side feared the other and each had reasons. A single misreading could harden suspicion into hostility.">Both, because neither could tell defense from aggression</button><button data-response="Some people take that view. The lesson still asks you to understand why each side felt as it did, since fear that feels real can drive real decisions.">Neither; they seem like excuses</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -321,6 +354,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">BERLIN AND THE TWO GERMANYS</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Germany had been divided into four zones, and so had its capital, Berlin, which lay deep inside the Soviet zone. In 1948 the Western powers combined their zones and introduced a new currency. Stalin saw this as a threat and, in June, cut off all road, rail, and canal traffic to West Berlin, hoping to starve the city or force the West out. Truman refused to give way, but he did not want to fight a ground war. The answer was the Berlin Airlift. For nearly a year, American and British planes landed every few minutes, carrying coal, food, and medicine to two million people. Stalin ended the blockade in May 1949.</p>
+<div class="ow-group" data-wid="w34-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did George Kennan advise in his Long Telegram?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Patient resistance wherever Soviet power pressed outward, since Soviet leaders held a view of the world in which conflict with the West was permanent.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Churchill say at Fulton, Missouri, in 1946?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">That an iron curtain had descended across the Continent. Stalin called him a warmonger, yet the line he described was real.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What had Britain announced in 1947?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Britain, exhausted, said it could no longer support Greece, which was fighting a communist-led rebellion, or Turkey, which was under Soviet pressure.</div></div><button class="widget-reset">Reset</button></div></div>
+
 <p style="margin:0 0 14px;">The result was two German states. West Germany, a democratic republic, was founded in May 1949, and the Soviets created communist East Germany in October. In April 1949 the United States, Canada, and ten European nations formed the North Atlantic Treaty Organization, or NATO, a pledge that an attack on one was an attack on all. The Soviets formed the Warsaw Pact in 1955 with their satellites. That same year, Europe's division was complete.</p>
 </div>
     </div>
@@ -335,6 +370,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">By 1961 about three million East Germans, many of them young and skilled, had left for the West, most of them through Berlin. In August the East German government built a wall of concrete and barbed wire across the city. Its guards were told to shoot those who tried to cross. President John Kennedy protested but did not send troops, judging that war was too high a price. The Berlin Wall became the best-known symbol of the division.</p>
 <p style="margin:0 0 14px;">The most dangerous moment came in October 1962. Fidel Castro, who had taken power in Cuba and turned it toward communism, accepted Soviet nuclear missiles on the island, only ninety miles from Florida. When American spy planes found them, Kennedy chose a naval quarantine instead of an air strike and demanded that the missiles be removed. For thirteen days the world held its breath. Soviet leader Nikita Khrushchev finally agreed to withdraw them, and in secret Kennedy agreed to remove American missiles from Turkey.</p>
+<div class="optima-widget ow-select" data-wid="w34-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; The wall and the brink</div><div class="widget-question">Choose the answer that fits the lesson for each item.</div><div class="widget-row" data-correct="1" data-fb="Right. About three million East Germans had left for the West, most of them through Berlin." data-hint="Think about who was crossing, and in which direction."><div class="widget-row-prompt">1. 1. Why did East Germany build the Berlin Wall in 1961?</div><div class="widget-options"><button data-choice="0">To keep Western troops from entering East Berlin.</button><button data-choice="1">To stop East Germans, many of them young and skilled, from leaving for the West.</button><button data-choice="2">To mark the border agreed at Yalta.</button><button data-choice="3">To protect the city from a Soviet attack.</button></div></div><div class="widget-row" data-correct="3" data-fb="Right. Kennedy chose a naval quarantine instead of an air strike and demanded that the missiles be removed." data-hint="He wanted a firm answer that stopped short of an attack."><div class="widget-row-prompt">2. 2. How did Kennedy answer the Soviet missiles in Cuba?</div><div class="widget-options"><button data-choice="0">He ordered an air strike on the missile sites.</button><button data-choice="1">He sent troops into Cuba at once.</button><button data-choice="2">He asked the United Nations to take the missiles away.</button><button data-choice="3">He ordered a naval quarantine and demanded that the missiles be removed.</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. Khrushchev agreed to withdraw the missiles, and in secret Kennedy agreed to remove American missiles from Turkey." data-hint="The deal involved missiles in another country, not in Cuba."><div class="widget-row-prompt">3. 3. What did Kennedy agree to in secret to end the crisis?</div><div class="widget-options"><button data-choice="0">To remove American missiles from Turkey.</button><button data-choice="1">To withdraw American troops from Berlin.</button><button data-choice="2">To end the Marshall Plan.</button><button data-choice="3">To let the Soviets keep missiles in Cuba.</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">The danger was greater than leaders knew. Accounts of the crisis say that on a Soviet submarine near Cuba, harassed by American ships, officers believed war had begun and one considered launching a nuclear torpedo. The decision required agreement from three officers, and one of them, Vasili Arkhipov, refused. Whether or not the story is exactly right, it shows how much rested on individual judgment at the edge of disaster. Afterward the two powers set up a telephone hotline, and in later years they signed arms limitation agreements. In the next lesson you will see how the Soviet system, which looked so strong in this era, came to an end.</p>
 </div>
     </div>
@@ -370,6 +407,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>
