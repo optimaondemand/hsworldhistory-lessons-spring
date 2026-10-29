@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -321,6 +352,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Most Iranians belong to the Shia branch of Islam, which differs from the Sunni branch, to which most Muslims elsewhere belong, over who should lead the community after Muhammad. Shia clergy have long held great moral authority. The Shah's chief critic was an <span class="gloss" tabindex="0"><em>ayatollah</em><button class="gloss-audio" onclick="speakGloss(event,'eye-uh-TOH-luh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">eye-uh-TOH-luh</span>A Persian title, from the Arabic, meaning "sign of God." It is given to the most respected senior scholars of Shia Islam. <a class="om-maplink" href="#gloss-ayatollah">See the glossary box.</a></span></span>, Ruhollah Khomeini, who denounced him for corruption and for submission to the West. Khomeini was exiled in 1964 and spent years in Iraq and then France, where his sermons were smuggled home on cassette tapes.</p>
 <p style="margin:0 0 14px;">In 1978 protests began, and when soldiers fired on crowds the protests grew. Strikes, including those of oil workers, paralyzed the country. The Shah, secretly ill with cancer, hesitated to use full force, and some of his generals lost heart. He left Iran in January 1979. Khomeini returned in triumph in February, and a referendum soon created an Islamic Republic. Khomeini taught that, in the absence of the hidden Imam, the senior scholars should rule. The result was a <span class="gloss" tabindex="0"><strong>theocracy</strong><button class="gloss-audio" onclick="speakGloss(event,'thee-OK-ruh-see')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">thee-OK-ruh-see</span>A government in which religious leaders hold the highest political power and rule in the name of God. <a class="om-maplink" href="#gloss-theocracy">See the glossary box.</a></span></span>, with an elected president and parliament but a Supreme Leader above them. Many who had joined the revolution, including liberals and the left, found themselves jailed or silenced. The Shah's fall was not inevitable. A different response in 1978 might have kept him on the throne.</p>
+<div class="optima-widget ow-reflect" data-wid="w36-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Many liberals and people on the left joined the revolution and were later jailed or silenced. What would you most want answered before joining a movement like that? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="A fair question. In Iran a Supreme Leader stood above an elected president and parliament.">Who will hold the final power once the old ruler is gone?</button><button data-response="That question mattered. The lesson says many who had joined the revolution found themselves jailed or silenced.">What will happen to people who disagree with the movement?</button><button data-response="Movements gather people with different aims. Religious Iranians, bazaar merchants, students, liberals, and the left all opposed the Shah, but not necessarily for the same reasons.">Do its leaders share my reasons for wanting change?</button><button data-response="Worth asking. The lesson says the Shah banned real opposition, which made that question hard to act on.">Is there another way to change things?</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -334,6 +367,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">AFGHANISTAN AND AL-QAEDA</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">In December 1979 Soviet troops invaded Afghanistan to prop up a communist government. Many Afghans, a deeply religious and tribal people, rose against it. These fighters, the <span class="gloss" tabindex="0"><em>mujahideen</em><button class="gloss-audio" onclick="speakGloss(event,'moo-jah-heh-DEEN')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">moo-jah-heh-DEEN</span>An Arabic word meaning "those who struggle." In Afghanistan in the 1980s it named the fighters who resisted the Soviet army. <a class="om-maplink" href="#gloss-mujahideen">See the glossary box.</a></span></span>, received weapons and money from the United States, Saudi Arabia, and Pakistan, and many volunteers came from other Muslim lands. A wealthy young Saudi named Osama bin Laden helped to fund and organize some of them. The Soviets withdrew in 1989 after nearly ten years, a defeat that helped bring on the collapse of the Soviet Union.</p>
+<div class="ow-group" data-wid="w36-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">The hostages, 1979 to 1981<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Students seized the American embassy in Tehran. Fifty-two hostages were held for 444 days and released the day Ronald Reagan took office. The crisis humiliated the United States and helped defeat Carter&#x27;s bid for re-election.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Iraq invades Iran, 1980<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Saddam Hussein expected a quick victory over a country in turmoil. The war lasted eight years and killed hundreds of thousands, and it ended with the borders where they started.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">The Soviets in Afghanistan<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">They invaded in December 1979 to prop up a communist government and withdrew in 1989 after nearly ten years. The defeat helped bring on the collapse of the Soviet Union.</div></div><button class="widget-reset">Reset</button></div></div>
+
 <p style="margin:0 0 14px;">When the Soviets left, the world lost interest, and Afghanistan fell into civil war. A movement of religious students, the Taliban, took the capital, Kabul, in 1996, and imposed a harsh rule, forbidding girls to attend school and barring women from most work. Bin Laden, who had turned against the United States, formed a network called al-Qaeda, meaning "the base." He had objected to American troops in Saudi Arabia, home to Islam's holiest cities, after the Gulf War of 1991, and he issued a declaration of war on Americans in 1996. The Taliban gave him a base.</p>
 <p style="margin:0 0 14px;">Al-Qaeda practiced <span class="gloss" tabindex="0"><strong>terrorism</strong><button class="gloss-audio" onclick="speakGloss(event,'TER-er-iz-um')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">TER-er-iz-um</span>The use of violence against civilians to spread fear and force a government or a people to give in to a political or religious demand. <a class="om-maplink" href="#gloss-terrorism">See the glossary box.</a></span></span>. In 1993 a bomb exploded beneath the World Trade Center in New York, killing six. In August 1998 truck bombs destroyed the American embassies in Kenya and Tanzania, killing more than two hundred people, most of them Africans. In October 2000 a small boat packed with explosives hit the destroyer USS Cole in Yemen and killed seventeen sailors. Most Muslims, including most religious scholars, rejected such violence, and most victims of the extremists were themselves Muslims.</p>
 </div>
@@ -343,6 +378,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">On the morning of September 11, 2001, nineteen men, most of them from Saudi Arabia, boarded four airliners in the northeastern United States. Armed with box cutters, they took over the planes. At 8:46 one flew into the north tower of the World Trade Center, and at 9:03 another struck the south tower. At 9:37 a third hit the Pentagon, near Washington. Passengers on the fourth, Flight 93, learned by telephone what had happened to the others. They fought the hijackers, and the plane crashed in a field in Pennsylvania, short of its target, which was probably the Capitol or the White House. Both towers collapsed within two hours.</p>
 <p style="margin:0 0 14px;">Nearly three thousand people from more than ninety countries died, the deadliest attack on American soil. Firefighters and police climbed the stairs as others fled, and 343 firefighters were among the dead. Air travel in the United States halted for days. It was a day of horror, and also of courage, as many ordinary people helped strangers.</p>
+<div class="optima-widget ow-select" data-wid="w36-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; AFTER AFGHANISTAN</div><div class="widget-question">Answer each question about al-Qaeda and its attacks.</div><div class="widget-row" data-correct="1" data-fb="The lesson says the bombings killed more than two hundred people, most of them Africans." data-hint="Reread the sentence about the August 1998 bombings."><div class="widget-row-prompt">1. Who were most of the people killed in the 1998 embassy bombings in Kenya and Tanzania?</div><div class="widget-options"><button data-choice="0">American diplomats</button><button data-choice="1">Africans</button><button data-choice="2">Soldiers on duty</button><button data-choice="3">Saudi visitors</button></div></div><div class="widget-row" data-correct="3" data-fb="They fought the hijackers, and the plane crashed in a field in Pennsylvania, short of its probable target." data-hint="Look for the paragraph about the fourth plane."><div class="widget-row-prompt">2. What did the passengers of Flight 93 do after they learned by telephone what had happened to the other planes?</div><div class="widget-options"><button data-choice="0">They waited for fighter planes to escort them down</button><button data-choice="1">They obeyed the hijackers to protect the crew</button><button data-choice="2">They landed at the nearest airport</button><button data-choice="3">They fought the hijackers, and the plane crashed short of its target</button></div></div><div class="widget-row" data-correct="0" data-fb="The lesson says most Muslims, including most religious scholars, rejected such violence, and most victims of the extremists were themselves Muslims." data-hint="Reread the last sentences of the paragraph about the bombings."><div class="widget-row-prompt">3. How did most Muslims and most religious scholars regard the violence of al-Qaeda?</div><div class="widget-options"><button data-choice="0">They rejected it; most victims were Muslims themselves</button><button data-choice="1">They supported it if it was aimed at foreigners</button><button data-choice="2">They kept silent because the attacks were far away</button><button data-choice="3">They were evenly split between support and rejection</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">President George W. Bush spoke to Congress on September 20, which you will read. He said that the United States would hold responsible any nation that harbored terrorists, and in October American and allied forces, with Afghan allies, began a war that drove the Taliban from power. In the next lesson you will see the wider world that these events shook.</p>
 </div>
     </div>
@@ -378,6 +415,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>
