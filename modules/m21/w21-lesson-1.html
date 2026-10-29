@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -321,6 +352,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="margin:0 0 14px;">Europeans brought horses, cattle, pigs, sheep, wheat, and grapes to the Americas. Horses changed life on the Great Plains, where peoples learned to ride and hunt on horseback. Cattle and pigs spread across the continent, because the land had room and no natural enemies for them.</p>
 <p style="margin:0 0 14px;">In the other direction went crops that fed the world. Maize and potatoes, which grew well in poor soil, spread across Europe, Africa, and Asia. The potato in particular was a cheap source of calories, and it helped feed growing populations across northern Europe. Cassava, a starchy root, became a staple in parts of Africa. Tomatoes, beans, peppers, and cacao came as well, and so did tobacco, which Europeans quickly learned to smoke and to sell.</p>
 <p style="margin:0 0 14px;">The most deadly passengers were invisible. Europeans carried smallpox, measles, and influenza. People in the Americas had never met these diseases, and they had no resistance. In the Caribbean the Taíno people, who had greeted Columbus, nearly vanished within two generations. On the mainland the population fell by a huge share over the next century, though historians still argue about the exact numbers. The Spaniards did not understand what was happening, and they did not intend it. Spanish labor demands added to the toll. By the 1500s, whole islands stood empty of the people who had once farmed them.</p>
+<div class="optima-widget ow-reflect" data-wid="w21-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">You have just read how animals, crops, and diseases crossed the Atlantic. Which part is hardest for you to picture? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="The lesson says peoples there learned to ride and hunt on horseback, and that changed their life. No government planned it.">Horses on the Great Plains</button><button data-response="Both grew well in poor soil. The lesson calls the potato a cheap source of calories that helped feed growing populations.">Maize and potatoes spreading</button><button data-response="The Taíno, who greeted Columbus, nearly vanished within two generations. The lesson says the Spaniards did not understand what was happening and did not intend it, though Spanish labor demands added to the toll.">Disease with no resistance</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -334,6 +367,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE ROAD OF SUGAR</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">One of the plants that crossed the ocean had a long history already. Sugarcane began in the Pacific and was farmed in India. Arab traders carried it around the Mediterranean, and the Crusaders, whom you met earlier, brought a taste for it home. Sugar was rare and expensive, a luxury for the rich. In the 1400s the Portuguese planted cane on islands in the Atlantic, such as Madeira. On his second voyage in 1493 Columbus brought cane cuttings to the island of Hispaniola.</p>
+<div class="optima-widget ow-select" data-wid="w21-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHICH WAY DID IT TRAVEL?</div><div class="widget-question">Choose what the lesson says about each item.</div><div class="widget-row" data-correct="1" data-fb="Right. People in the Americas had never met these diseases and had no resistance." data-hint="Think about who had lived with these diseases for centuries, and who had not."><div class="widget-row-prompt">1. Smallpox, measles, and influenza</div><div class="widget-options"><button data-choice="0">Carried by Americans to Europe</button><button data-choice="1">Carried by Europeans to the Americas</button><button data-choice="2">Spread only inside Europe</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. They were crops that fed the world." data-hint="The lesson says these were crops that went in the other direction from horses and cattle."><div class="widget-row-prompt">2. Maize and potatoes</div><div class="widget-options"><button data-choice="0">Native to the Americas, then spread across Europe, Africa, and Asia</button><button data-choice="1">Native to Europe, then planted in the Americas</button><button data-choice="2">Native to Asia, then carried to both</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. It was farmed in India, then carried around the Mediterranean, and Columbus brought cuttings to Hispaniola in 1493." data-hint="Look at the first sentence of the section on the road of sugar."><div class="widget-row-prompt">3. Sugarcane</div><div class="widget-options"><button data-choice="0">It began in West Africa</button><button data-choice="1">It began in the Americas</button><button data-choice="2">It began in the Pacific region</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Sugar was hard to grow and harder to make. It needs heat, rain, and a great deal of land. The cane must be cut at exactly the right time and crushed within a day, or the juice spoils. The juice is then boiled in huge pots over fires that burn day and night. Mills and boiling houses cost a fortune. The result was a new kind of farm, the <span class="gloss" tabindex="0"><strong>plantation</strong><button class="gloss-audio" onclick="speakGloss(event,'plan-TAY-shun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">plan-TAY-shun</span>A large farm that grows one cash crop, such as sugar, for sale far away. <a class="om-maplink" href="#gloss-plantation">See the glossary box.</a></span></span>, where hundreds of workers labored in gangs under one owner to produce a single crop for sale across the sea.</p>
 </div>
     </div>
@@ -350,6 +385,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Brazil showed how profitable the system could be. From the 1530s the Portuguese built sugar mills, each called an <span class="gloss" tabindex="0"><em>engenho</em><button class="gloss-audio" onclick="speakGloss(event,'en-ZHEN-yoo')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">en-ZHEN-yoo</span>A Portuguese word for a sugar mill, and for the whole estate built around it. <a class="om-maplink" href="#gloss-engenho">See the glossary box.</a></span></span>, along the Brazilian coast. By 1600 Brazil was the largest sugar producer in the world. The Dutch wanted a share of that trade. Their West India Company, a <span class="gloss" tabindex="0"><strong>joint-stock company</strong><button class="gloss-audio" onclick="speakGloss(event,'joint-STOK KUM-puh-nee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">joint-STOK KUM-puh-nee</span>A business owned by many investors who each buy shares. Each owner risks only the money he or she put in. <a class="om-maplink" href="#gloss-joint-stock-company">See the glossary box.</a></span></span> with a <span class="gloss" tabindex="0"><strong>monopoly</strong><button class="gloss-audio" onclick="speakGloss(event,'muh-NOP-uh-lee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">muh-NOP-uh-lee</span>The sole right to sell a good or run a trade, so that no one else is allowed to compete. <a class="om-maplink" href="#gloss-monopoly">See the glossary box.</a></span></span> in the Atlantic, seized the sugar coast in 1630. The Portuguese drove them out by 1654. By then the Dutch had learned the business, and they sold equipment and credit to anyone willing to try it elsewhere.</p>
 <p style="margin:0 0 14px;">Elsewhere meant the Caribbean. English settlers had landed on the island of Barbados in 1627 and tried tobacco, but the profits were small. In the 1640s they turned to sugar, and the island changed almost at once. Small farms were bought up and merged into large <span class="gloss" tabindex="0"><strong>plantations</strong><button class="gloss-audio" onclick="speakGloss(event,'plan-TAY-shun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">plan-TAY-shun</span>A large farm that grows one cash crop, such as sugar, for sale far away. <a class="om-maplink" href="#gloss-plantation">See the glossary box.</a></span></span>. Many of the first workers were <span class="gloss" tabindex="0"><strong>indentured servants</strong><button class="gloss-audio" onclick="speakGloss(event,'in-DEN-churd SER-vunt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">in-DEN-churd SER-vunt</span>A person who agrees to work for a set number of years, usually in return for passage across the sea, and who is then free. <a class="om-maplink" href="#gloss-indentured-servant">See the glossary box.</a></span></span> from England, Scotland, and Ireland, who signed contracts for four to seven years of labor. The work was so brutal and the diseases so deadly that many died before their contracts ended. England took Jamaica from Spain in 1655, and France built the colony of Saint-Domingue on the western half of Hispaniola. Each of these colonies followed the same path.</p>
+<div class="ow-group" data-wid="w21-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; REMEMBER THIS?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why was sugar so costly to make?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It needs heat, rain, and a great deal of land. The cane must be cut at the right time and crushed within a day, or the juice spoils. Mills and boiling houses cost a fortune.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; REMEMBER THIS?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What happened in Barbados in the 1640s?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">English settlers had tried tobacco, but the profits were small. They turned to sugar, and small farms were bought up and merged into large estates.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; REMEMBER THIS?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the Dutch learn from Brazil?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">They seized the sugar coast in 1630 and were driven out by 1654. By then they knew the business, and they sold equipment and credit to anyone willing to try sugar elsewhere.</div></div><button class="widget-reset">Reset</button></div></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -391,6 +428,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>
