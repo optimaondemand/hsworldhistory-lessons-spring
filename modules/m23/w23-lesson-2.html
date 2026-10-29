@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -317,6 +348,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">A French saying summed up Louis's goal: one king, one law, one faith. The <span class="gloss" tabindex="0"><strong>Huguenots</strong><button class="gloss-audio" onclick="speakGloss(event,'HYOO-guh-not')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">HYOO-guh-not</span>A French Protestant of the 1500s to 1700s. <a class="om-maplink" href="#gloss-huguenot">See the glossary box.</a></span></span> were French Protestants, and there were perhaps a million of them. In 1598 King Henri IV had issued the Edict of Nantes to end the wars of religion. This <span class="gloss" tabindex="0"><strong>edict</strong><button class="gloss-audio" onclick="speakGloss(event,'EE-dikt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">EE-dikt</span>An official order issued by a ruler. <a class="om-maplink" href="#gloss-edict">See the glossary box.</a></span></span> let Huguenots worship in many places and gave them some legal protection.</p>
 <p style="margin:0 0 14px;">Louis believed that a united kingdom needed a single faith, and his bishops agreed. From the 1660s he cut away Huguenot rights. He closed their schools and shut them out of many professions. From 1681 his agents used the <span class="gloss" tabindex="0"><em>dragonnade</em><button class="gloss-audio" onclick="speakGloss(event,'drag-uh-NAYD')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">drag-uh-NAYD</span>A French word for the practice of quartering soldiers in Protestant homes to force the family to convert. <a class="om-maplink" href="#gloss-dragonnade">See the glossary box.</a></span></span>. They quartered soldiers in Huguenot homes and let them behave as roughly as they liked until the family gave in. Thousands converted to make it stop. In October 1685, the Edict of Fontainebleau revoked the Edict of Nantes completely. Protestant churches were to be torn down, pastors were ordered out, and worship was forbidden. Louis was told that Protestantism in France was finished.</p>
+<div class="optima-widget" data-wid="w23-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">In 1685 Louis was told that Protestantism in France was finished. He had cut Protestant rights, closed their schools, and sent soldiers into their homes to force conversions.</div><details class="ow-reveal"><summary>Decide first, and jot your answer in your notebook: what could go wrong with a king's belief that one order can end a faith? Then open to compare.</summary><div class="ow-reveal-body">A decree can close churches and forbid worship, but it cannot make every person stay and obey. People with skills, savings, and strong beliefs can choose to leave, and they take their skills with them. Rival rulers can decide to welcome them. Louis was sure that force could end a faith, but that was a belief about people, not a fact, and the next part of the lesson shows what it cost.</div></details><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #EEF1F8; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -338,6 +371,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE KING WHO BACKED THE LOSER</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">When William took the English crown in 1689, Louis took the side of the exiled James II. He gave James ships, money, and soldiers to retake Ireland. William defeated them at the Boyne in 1690. Louis had now made himself the enemy of the new English government, and England would be at war with France for most of the next twenty-five years.</p>
+<div class="optima-widget ow-seq" data-wid="w23-2-2" data-ra-skip data-n="5" data-fb="That is the order the lesson gives: 1667, 1672, 1681, 1685, and 1690." data-hint="The attack on the Dutch came before the seizure of Strasbourg, and the Boyne came last, after William took the English crown."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Tap these events in the order they happened, earliest first.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Louis&#x27;s first war begins, over lands in the Spanish Netherlands</button><button data-pos="2">Louis attacks the Dutch Republic with an enormous army</button><button data-pos="3">Louis seizes the city of Strasbourg in peacetime</button><button data-pos="4">Protestant worship is forbidden throughout France</button><button data-pos="5">William defeats James II and his French soldiers at the Boyne</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -357,6 +392,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE COST TO ORDINARY PEOPLE</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">The burden of war fell heavily on ordinary people. Soldiers had to be fed and clothed, and taxes grew heavier. The cold winters of 1693 and 1709 ruined harvests, and many starved. The military engineer Marshal Vauban, who built the great fortresses that guarded France, saw the misery. He proposed a fairer tax that nobles and clergy would also pay. Louis rejected the idea and banned the book. Vauban died soon after. His plan went unused, and the problem he named stayed with France for the rest of the century.</p>
+<div class="optima-widget ow-scale" data-wid="w23-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH WAS HIS DOING?</div><div class="widget-question">The winters of 1693 and 1709 ruined harvests, and the wars made taxes heavier. How much of the suffering of ordinary French people came from the king's own choices?</div><div class="widget-row" data-correct="2,3" data-fb="Reasonable. Weather and policy both mattered, and the lesson does not give an exact split." data-hint="Think about the winters, the war taxes, and Vauban&#x27;s plan."><div class="widget-options"><button data-choice="0" data-fb="Look again. Soldiers had to be fed and taxes grew heavier because of the wars, and Louis rejected Vauban&#x27;s fairer tax.">None of it</button><button data-choice="1" data-fb="Try higher. The war taxes and the refusal of a fairer tax were choices, even though the winters were not.">A small part</button><button data-choice="2" data-fb="Reasonable. The cold winters were beyond any king&#x27;s control, but the war taxes and the refusal of a fairer tax were Louis&#x27;s choices.">Part of it</button><button data-choice="3" data-fb="Reasonable. War taxes and the rejection of Vauban&#x27;s plan were Louis&#x27;s choices, though the weather also ruined the harvests.">Most of it</button><button data-choice="4" data-fb="Close, but not all. The winters of 1693 and 1709 ruined harvests, and no king controls the weather.">All of it</button></div></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -399,6 +436,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

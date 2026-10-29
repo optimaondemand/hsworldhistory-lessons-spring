@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -328,6 +359,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">The Convention put Louis on trial for treason. Papers found in a hidden safe in the Tuileries showed that he had been in secret contact with France's enemies. Most deputies voted that he was guilty. The vote for death was close, and on January 21, 1793, Louis XVI went to the guillotine. His last words, a witness said, were a plea that his blood not be used against France.</p>
 <p style="margin:0 0 14px;">The execution horrified the monarchs of Europe. Britain, Spain, and the Dutch Republic joined Austria and Prussia against France. At home, in the western region called the Vendée, peasants rose in revolt in March 1793. They resented the order to send young men into the army and the attacks on their priests.</p>
+<div class="optima-widget" data-wid="w26-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">It is early 1793. The king has been executed. Britain, Spain, and the Dutch Republic have joined Austria and Prussia against France, and peasants in the Vendée are in revolt.</div><details class="ow-reveal"><summary>Decide first, and jot your answer in your notebook: what powers would you give the government, and what could go wrong with them? Then open to compare.</summary><div class="ow-reveal-body">A government fighting invasion and civil war at once needs to act fast, and a small group can act faster than a large assembly. But power given for an emergency is easy to hand over and hard to take back, and a small body with great power faces few checks. The Convention gave great power to the <span class="gloss" tabindex="0"><strong>Committee of Public Safety</strong><button class="gloss-audio" onclick="speakGloss(event,'kuh-MIT-ee uv PUB-lik SAYF-tee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">kuh-MIT-ee uv PUB-lik SAYF-tee</span>The small committee of the Convention that ran France's government and war effort from 1793 to 1794. <a class="om-maplink" href="#gloss-committee-of-public-safety">See the glossary box.</a></span></span>. That was a choice, and other choices were possible. A larger body might have been slower, but it might also have slowed the use of terror.</div></details><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -342,6 +375,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">The most famous member of the Committee was Maximilien Robespierre, a lawyer from Arras. He lived simply, refused bribes, and was called "the Incorruptible." He had read Rousseau and admired the citizens of early Rome. His dream was a Republic of Virtue, a nation of citizens who loved the public good more than themselves. He had been an opponent of the death penalty earlier in his career. Now he argued that the Republic could not survive unless its enemies were destroyed. Virtue, he said in a speech in February 1794, was the spirit of a republic, and terror was the tool to defend it.</p>
 <p style="margin:0 0 14px;">Here the old Classical Republican question comes alive. Polybius and Machiavelli had taught that republics survive on the habits of their citizens. But habits grow slowly, through families, churches, and schools, and they cannot be made by force. A government that tries to compel virtue with the guillotine may crush both virtue and liberty. The revolutionaries also tried to remake life itself. They created a new calendar with ten-day weeks, closed churches, and held festivals to a Supreme Being. Many French people found this alarming.</p>
+<div class="optima-widget ow-scale" data-wid="w26-2-2" data-ra-skip><div class="widget-kicker">&#9889; CAN VIRTUE BE FORCED?</div><div class="widget-question">Robespierre wanted a nation of citizens who loved the public good more than themselves, and he used terror to defend it. How much can a government build good habits in its citizens by force?</div><div class="widget-row" data-correct="0,1" data-fb="Reasonable. Habits of citizens grow slowly, and force cannot make them." data-hint="Think about where the lesson says good habits come from."><div class="widget-options"><button data-choice="0" data-fb="Reasonable. The lesson says habits grow slowly, through families, churches, and schools, and cannot be made by force.">Not at all</button><button data-choice="1" data-fb="Reasonable. Force may produce obedience, but habits grow through families, churches, and schools.">Only a little</button><button data-choice="2" data-fb="Try lower. The lesson warns that a government that tries to compel virtue may crush both virtue and liberty.">Somewhat</button><button data-choice="3" data-fb="Look again. Habits grow slowly, and a government that compels virtue with the guillotine may crush both virtue and liberty.">A great deal</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Robespierre was not a cruel man by temper, and that is what makes his case so troubling. He believed he was defending a pure cause against corrupt enemies. Once a leader decides that disagreement is treason, every critic becomes a traitor, and there is no limit to the list. A free republic needs ways to settle quarrels peacefully, and the Terror had destroyed them.</p>
 </div>
     </div>
@@ -356,6 +391,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THERMIDOR</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">On July 27, 1794, the ninth of <span class="gloss" tabindex="0"><em>Thermidor</em><button class="gloss-audio" onclick="speakGloss(event,'tur-mee-DOR')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">tur-mee-DOR</span>The French name for the month of July and August in the new Revolutionary calendar. It is also the name of the coup that overthrew Robespierre on July 27, 1794. <a class="om-maplink" href="#gloss-thermidor">See the glossary box.</a></span></span> in the Revolutionary calendar, Robespierre rose in the Convention to hint that more traitors had to be found. Fearful deputies shouted him down, and he was arrested along with his closest supporters. The Paris city government tried to free him, but the Convention declared them outlaws. Soldiers retook them in the night. On July 28 Robespierre and about twenty others went to the guillotine, to cheers.</p>
+<div class="optima-widget ow-seq" data-wid="w26-2-3" data-ra-skip data-n="5" data-fb="That is the order the lesson gives: September 1792, January 1793, September 1793, April 1794, and July 1794." data-hint="The king died before the new arrest law, and Danton fell before Robespierre did."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Tap these events in the order they happened, earliest first.</div><div class="widget-options ow-seq-pool"><button data-pos="1">The Convention abolishes the monarchy</button><button data-pos="2">Louis XVI goes to the guillotine</button><button data-pos="3">A new law allows the arrest of anyone thought an enemy of liberty</button><button data-pos="4">Danton is executed</button><button data-pos="5">Robespierre is shouted down in the Convention and arrested</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">The Terror ended, though not at once. Prisoners were freed, the Jacobin club was closed, and in 1795 France adopted a new constitution. It gave power to a five-man Directory. The Directory was weak and corrupt, and it came to rely on the army to hold on to power.</p>
 </div>
     </div>
@@ -398,6 +435,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

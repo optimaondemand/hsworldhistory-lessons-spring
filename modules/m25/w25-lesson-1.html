@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -309,6 +340,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">A SHOT IN THE FOREST</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">By 1750 about 1.5 million colonists lived in Britain's thirteen colonies along the Atlantic coast. New France stretched from Quebec up the St. Lawrence River and down the Mississippi to New Orleans, but it had only about 70,000 settlers. Both sides claimed the Ohio Valley. In 1754 a young Virginia officer named George Washington led a small force into it and was forced to surrender at Fort Necessity. That skirmish helped start what Europeans call the Seven Years' War and Americans call the French and Indian War.</p>
+<div class="optima-widget ow-reflect" data-wid="w25-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">A small clash in a forest in 1754 helped start a war that spread across several continents. When a small clash grows into a world war, what do you think usually matters most? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="A good thought. Native nations and European powers each had their own interests, and the fighting spread far beyond the Ohio Valley.">Others being pulled in</button><button data-response="Often so. Britain and France had competed over trade, colonies, and the seas for most of a century.">Old rivalries that were already there</button><button data-response="Chance matters more than we like to admit. A skirmish only becomes a world war when much else is already in place.">Chance and bad timing</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Native nations had their own interests and fought on both sides. The fighting soon spread to Europe, India, the Caribbean, West Africa, and the oceans in between, so it became the first war that was truly global. At first Britain lost battle after battle.</p>
 </div>
     </div>
@@ -337,6 +370,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE TREATY OF PARIS, 1763</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">The war ended with the Treaty of Paris in 1763. France had to <span class="gloss" tabindex="0"><strong>cede</strong><button class="gloss-audio" onclick="speakGloss(event,'SEED')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SEED</span>To give up land or power to another nation, usually in a treaty. <a class="om-maplink" href="#gloss-cede">See the glossary box.</a></span></span> Canada and its claims east of the Mississippi to Britain. Spain gave up Florida to Britain, and France gave Louisiana to Spain. French power in India was cut down to a few trading towns. France did keep two small sugar islands, Guadeloupe and Martinique. Its ministers judged that sugar was worth more than the snows of Canada, as you learned in Week 21.</p>
+<div class="optima-widget ow-select" data-wid="w25-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHO DID WHAT</div><div class="widget-question">Check what you have read about the war and the peace of 1763.</div><div class="widget-row" data-correct="1" data-fb="Right. Clive, a company clerk turned officer, beat a far larger army of the ruler of Bengal." data-hint="Think of the company clerk who became an officer in India."><div class="widget-row-prompt">1. Who won at Plassey in 1757 with about 3,000 men?</div><div class="widget-options"><button data-choice="0">William Pitt</button><button data-choice="1">Robert Clive</button><button data-choice="2">James Wolfe</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. France gave Louisiana to Spain, while Britain took Canada and Florida." data-hint="Britain did not receive it. Think of the crown that gave up Florida."><div class="widget-row-prompt">2. Which power received Louisiana from France in 1763?</div><div class="widget-options"><button data-choice="0">Britain</button><button data-choice="1">Prussia</button><button data-choice="2">Spain</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. Pitt took charge of British strategy in 1757 and trusted the nation&#x27;s credit to carry it." data-hint="Think of the man who took charge of British strategy in 1757."><div class="widget-row-prompt">3. Who believed France could be beaten where it was weakest, at sea and in the colonies?</div><div class="widget-options"><button data-choice="0">William Pitt</button><button data-choice="1">Frederick the Great</button><button data-choice="2">The Marquis de Montcalm</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Britain now dominated North America, India, and the seas. Yet Pitt's method had a price. During the war the British national debt almost doubled, to about 130 million pounds.</p>
 </div>
     </div>
@@ -346,6 +381,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="margin:0 0 14px;">Peace brought new problems on the frontier. Native nations that had fought alongside the French feared the flood of settlers. In 1763 an Ottawa leader named Pontiac led a rising that captured several British forts west of the mountains. London answered with the Proclamation of 1763, which forbade colonists to settle beyond the Appalachian Mountains. Keeping order there meant keeping soldiers there, and soldiers cost money. Many colonists, who had hoped to claim the Ohio Valley, were angry.</p>
 <p style="margin:0 0 14px;">Parliament looked for ways to pay. British ministers thought the colonists should help to pay for defending the frontier, since the war had begun there. They passed new taxes, beginning with the Stamp Act of 1765. The colonists, who had their own assemblies and prized the rights of Englishmen, replied that they could not be taxed without their own consent. Last week you read Locke's argument about consent. Many colonists had read it too.</p>
 <p style="margin:0 0 14px;">The quarrel grew over eleven years. Neither side planned a break. Each took one more step, and then another. In 1776 the colonies declared independence. You will read their Declaration this week and judge its argument for yourself.</p>
+<div class="ow-group" data-wid="w25-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Pontiac<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">An Ottawa leader who led a rising in 1763 and captured several British forts west of the mountains.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">The Proclamation of 1763<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It forbade colonists to settle beyond the Appalachian Mountains. Keeping order there meant keeping soldiers there, and soldiers cost money.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How the quarrel with the colonies grew<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Slowly, over eleven years. Neither side planned a break. Each took one more step, and then another.</div></div><button class="widget-reset">Reset</button></div></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -387,6 +424,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>
