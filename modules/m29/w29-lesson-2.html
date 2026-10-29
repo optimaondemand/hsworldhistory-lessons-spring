@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -331,6 +362,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WAR, VOLUNTEERS, AND A KINGDOM</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">War came in 1859. The French and Piedmontese won the bloody battles of Magenta and Solferino. But Napoleon III grew alarmed at the cost and at the nationalist forces he had set loose. Without warning he signed a peace with Austria, leaving Venetia in Austrian hands. Cavour was furious and resigned. Even so, Piedmont received Lombardy, and the people of Tuscany and other central states voted to join it in 1860.</p>
+<div class="optima-widget" data-wid="w29-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">It is 1858. You are Count Cavour, and little Piedmont cannot defeat Austria alone.</div><details class="ow-reveal"><summary>Decide first, and jot your answer in your notebook: where would you look for help, and what might it cost you? Then open to compare.</summary><div class="ow-reveal-body">Cavour looked for an ally and found one in Napoleon III. The price was Nice and Savoy, and the risk showed in 1859, when Napoleon III grew alarmed at the cost and at the forces of Italian unity he had helped set loose. He signed a peace with Austria without warning, leaving Venetia in Austrian hands. Another path was to wait for Italians to rise on their own, as Mazzini hoped, but his risings failed again and again. Each path had its own risks, and neither was certain to work.</div></details><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Then came the second figure. Giuseppe Garibaldi was a seaman and a famous guerrilla fighter. In May 1860 he sailed from Genoa with about a thousand volunteers in red shirts and landed in Sicily. Against all odds, they defeated the Bourbon troops, crossed to the mainland, and marched into Naples. Cavour did not trust Garibaldi, who was a republican, but he also could not stop him. Garibaldi, to his credit, put the good of Italy above his own ambitions. He met King Victor Emmanuel II of Piedmont and handed him the whole south. In March 1861 the Kingdom of Italy was proclaimed. Cavour died that June, only a few months later. The new kingdom was not an easy one to govern. The north was prosperous and the south poor, and many southerners felt ruled from far away. The pope refused to recognize the new state for decades. Italy added Venice in 1866 as an ally of Prussia, and Rome in 1870, when the French garrison went home to fight Germany.</p>
 </div>
     </div>
@@ -339,6 +372,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Germany's road was different. After 1848, Austria and Prussia were rivals in the German <span class="gloss" tabindex="0"><strong>confederation</strong><button class="gloss-audio" onclick="speakGloss(event,'kun-fed-er-AY-shun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">kun-fed-er-AY-shun</span>A loose union of states that keep most of their own powers and share only a few tasks. <a class="om-maplink" href="#gloss-confederation">See the glossary box.</a></span></span>. Prussia had the stronger economy, helped by the <span class="gloss" tabindex="0"><em>zollverein</em><button class="gloss-audio" onclick="speakGloss(event,'TSOL-fair-eyen')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">TSOL-fair-eyen</span>A German word meaning "customs union." It was an agreement among German states to drop tariffs on goods crossing their borders. <a class="om-maplink" href="#gloss-zollverein">See the glossary box.</a></span></span> and its coal and iron, and the better army. In 1862 King William I wanted to enlarge that army, but the elected parliament refused to pay for it. The king, close to giving up the throne, called on Otto von Bismarck.</p>
 <p style="margin:0 0 14px;">Bismarck came from the Junkers, the landed nobility of eastern Prussia. He was a clever diplomat and a believer in <span class="gloss" tabindex="0"><em>realpolitik</em><button class="gloss-audio" onclick="speakGloss(event,'ray-AHL-poh-lee-teek')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ray-AHL-poh-lee-teek</span>A German word for politics based on power and practical results rather than on ideals. <a class="om-maplink" href="#gloss-realpolitik">See the glossary box.</a></span></span>, politics based on power and results. He told the parliament that the great questions would be settled not by speeches and majority votes but by iron and blood, and he ruled for years without a legal budget. Notice what kind of leader he was. He was no romantic nationalist. He wanted a strong Prussia, and he used German nationalism as a tool when it served that purpose.</p>
+<div class="optima-widget ow-seq" data-wid="w29-2-2" data-ra-skip data-n="5" data-fb="That is the order the lesson gives: 1849, 1852, 1858, 1860, and 1861." data-hint="The republic in Rome fell before Cavour came to power, and the kingdom came last."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Tap these events in the order they happened, earliest first.</div><div class="widget-options ow-seq-pool"><button data-pos="1">French troops crush the short-lived republic in Rome</button><button data-pos="2">Cavour becomes prime minister of Piedmont</button><button data-pos="3">Cavour makes a secret agreement with Napoleon III</button><button data-pos="4">Garibaldi lands in Sicily with about a thousand volunteers</button><button data-pos="5">The Kingdom of Italy is proclaimed</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +382,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="margin:0 0 14px;">His first war came in 1864. Prussia and Austria together defeated Denmark and took the duchies of Schleswig and Holstein. Bismarck then quarreled with Austria over how to govern them, and prepared for war with his partner. He made sure Russia stayed neutral and gained the friendship of Italy. In 1866 the Prussian army, moved by railroad and armed with the breech-loading needle gun, crushed the Austrians at Königgrätz in a matter of weeks. Its chief of staff, Helmuth von Moltke, planned the campaign.</p>
 <p style="margin:0 0 14px;">Here Bismarck showed his judgment. The king and the generals wanted to march on Vienna and take land. Bismarck argued against it. He took no Austrian territory, because he wanted Austria as a friend in the future. Austria was excluded from Germany, and the German states north of the Main River joined a North German Confederation under Prussian leadership.</p>
 <p style="margin:0 0 14px;">The last step was France. In 1870 a quarrel arose over a Hohenzollern prince's candidacy for the Spanish throne. Bismarck received a telegram from the king's vacation spot at Ems describing a polite meeting with the French ambassador, and he edited it to sound sharper. French opinion was inflamed, and Napoleon III declared war in July. The southern German states joined Prussia, and the German armies won victory after victory. On September 1, 1870, Napoleon III was captured at Sedan. Paris held out through a long siege. On January 18, 1871, in the Hall of Mirrors at Versailles, King William was proclaimed German Emperor. Bismarck became the first <span class="gloss" tabindex="0"><strong>chancellor</strong><button class="gloss-audio" onclick="speakGloss(event,'CHAN-suh-ler')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">CHAN-suh-ler</span>The chief minister of a government in some countries, such as Germany. <a class="om-maplink" href="#gloss-chancellor">See the glossary box.</a></span></span> of the new empire. France lost Alsace and part of Lorraine, a loss it would not forget.</p>
+<div class="optima-widget ow-scale" data-wid="w29-2-3" data-ra-skip><div class="widget-kicker">&#9889; THE EMS TELEGRAM</div><div class="widget-question">Bismarck edited the telegram from Ems to sound sharper, and French opinion was inflamed. How much did that edit have to do with the war that followed?</div><div class="widget-row" data-correct="1,2" data-fb="Reasonable. The edit inflamed French opinion, but the quarrel over the Spanish throne came first, and Napoleon III chose to declare war." data-hint="Ask what was already in dispute before the edit, and who made the final decision."><div class="widget-options"><button data-choice="0" data-fb="Look again. The lesson says French opinion was inflamed and Napoleon III declared war.">Nothing</button><button data-choice="1" data-fb="Reasonable. The edit inflamed French opinion, but the quarrel over the Spanish throne had already begun, and Napoleon III made the decision to declare war.">Something</button><button data-choice="2" data-fb="Reasonable. The edit inflamed French opinion, and Napoleon III declared war soon after.">A great deal</button><button data-choice="3" data-fb="Try lower. The quarrel over the Spanish throne came first, and Napoleon III himself chose to declare war.">Everything</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Compare the cost with the great wars of the past. The fighting that made Germany lasted only a few weeks in 1866 and about ten months in 1870 and 1871. Yet the result was a new great power in the middle of the continent. The new Germany had some forty-one million people, more than France, and its coal and steel output would soon pass Britain's.</p>
 </div>
     </div>
@@ -389,6 +426,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

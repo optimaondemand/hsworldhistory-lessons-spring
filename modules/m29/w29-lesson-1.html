@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -325,6 +356,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">A PEACE THAT LASTED</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Judge the Congress by the first test you have learned to apply to any regime: did it keep the peace? On that measure it did well. No war between the great powers engulfed all of Europe for almost forty years, until the Crimean War of 1854. The great powers agreed to meet when trouble arose, which became known as the Concert of Europe. Alexander also proposed a Holy Alliance of Christian monarchs, though the others thought it mostly a pious gesture. The diplomats showed prudence, which is the habit of weighing consequences before acting, and moderation toward the defeated. A harsher peace might have made France a permanent enemy.</p>
+<div class="optima-widget ow-reflect" data-wid="w29-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Europe went almost forty years without a war among the great powers. If you had sat at Vienna, what would you have trusted most to keep that peace? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="The great powers agreed to do just that. It became known as the Concert of Europe.">Meeting whenever trouble arose</button><button data-response="The diplomats wanted rulers whose claim came from law and long custom, such as the Bourbons in France, and not from a general&#x27;s sword.">Restoring the old ruling families</button><button data-response="A harsher peace might have made France a permanent enemy, so moderation had a practical purpose as well as a kind one.">Gentle terms for the defeated</button><button data-response="Alexander proposed a Holy Alliance of Christian monarchs, though the others thought it mostly a pious gesture.">A shared Christian pledge among kings</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -339,6 +372,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">METTERNICH'S SYSTEM</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Metternich saw this clearly, and he set out to hold the line. In 1819 a student murdered the conservative writer August von Kotzebue. Metternich used the event to push the Carlsbad Decrees through the German Confederation. They put universities under watch, banned student societies, and censored the press. Spies and police were common. Revolts that broke out in Spain and Naples in 1820 were put down by foreign troops.</p>
+<div class="optima-widget ow-select" data-wid="w29-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; AFTER VIENNA</div><div class="widget-question">Check what you know about the years after 1815.</div><div class="widget-row" data-correct="0" data-fb="Metternich used the murder to push through the Carlsbad Decrees. They put universities under watch, banned student societies, and censored the press." data-hint="Think about whether Metternich wanted to open things up or hold the line."><div class="widget-row-prompt">1. How did Metternich answer the murder of the writer Kotzebue in 1819?</div><div class="widget-options"><button data-choice="0">He had universities watched, student societies banned, and the press censored.</button><button data-choice="1">He called the great powers together to offer the German states a shared constitution.</button><button data-choice="2">He sent Austrian troops to occupy the Rhine lands.</button><button data-choice="3">He resigned in protest at the use of spies and police.</button></div></div><div class="widget-row" data-correct="3" data-fb="Alexander took most of Poland as a kingdom under his own crown. Austria regained northern Italy, Britain kept Malta and the others, and Prussia gained Rhine lands." data-hint="Each power took something different. Which one was the tsar?"><div class="widget-row-prompt">2. What did Tsar Alexander I take from the settlement at Vienna?</div><div class="widget-options"><button data-choice="0">Lombardy and Venetia in northern Italy</button><button data-choice="1">Malta, the Cape Colony, and Ceylon</button><button data-choice="2">The lands on the Rhine</button><button data-choice="3">Most of Poland, as a kingdom under his own crown</button></div></div><div class="widget-row" data-correct="2" data-fb="Britain was changing through laws and elections: the Reform Act of 1832 widened the vote, and the Corn Laws were repealed in 1846." data-hint="The lesson contrasts Britain with much of the continent."><div class="widget-row-prompt">3. How did Britain deal with demands for change in these years?</div><div class="widget-options"><button data-choice="0">It sent troops to put down the revolts in Spain and Naples.</button><button data-choice="1">It banned student societies and censored the press.</button><button data-choice="2">It widened the vote in 1832 and later repealed the Corn Laws.</button><button data-choice="3">It joined the Greeks&#x27; enemies against them.</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">But the pressure kept building. The Greeks rose against the Ottoman Empire in 1821 and, after years of war and the intervention of Britain, France, and Russia, won their independence by 1830. The poet Lord Byron died in 1824 helping them. In 1830 a revolution in Paris drove out Charles X and replaced him with a more liberal king, Louis-Philippe, and Belgium broke away from the Dutch. Britain, meanwhile, passed the Reform Act of 1832, which widened the vote, and repealed the Corn Laws in 1846, which had kept bread dear. Britain was changing through laws and elections. Much of the continent was not.</p>
 </div>
     </div>
@@ -360,6 +395,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">1848: THE SPRINGTIME OF PEOPLES</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Then in 1845 and 1846 harvests failed, food grew dear, and workers lost their jobs. In February 1848 Paris rose again, and King Louis-Philippe fled. The news raced across Europe by newspaper and railway. In March crowds rose in Vienna, and Metternich, who had governed for nearly forty years, resigned and escaped to England. Revolts followed in Berlin, in Hungary under Lajos Kossuth, and in cities across Italy. Liberals demanded constitutions, nationalists demanded nations, and some workers demanded <span class="gloss" tabindex="0"><strong>socialism</strong><button class="gloss-audio" onclick="speakGloss(event,'SOH-shuh-liz-um')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SOH-shuh-liz-um</span>The idea that the main tools and factories should be owned by the whole community or by the workers, not by private owners. <a class="om-maplink" href="#gloss-socialism">See the glossary box.</a></span></span>.</p>
+<div class="ow-group" data-wid="w29-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the customs union of 1834 do, and who was left out?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Goods crossed dozens of borders without tolls, and Austria was left out. A path was opening toward a Germany shaped around Prussia.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How did the Greek rising of 1821 end?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">After years of war and the intervention of Britain, France, and Russia, the Greeks won their independence by 1830.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What set off the revolutions of 1848?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Harvests failed in 1845 and 1846, food grew dear, and workers lost their jobs. Then Paris rose in February 1848, and the news raced across Europe.</div></div><button class="widget-reset">Reset</button></div></div>
+
 <p style="margin:0 0 14px;">At Frankfurt an elected assembly met to write a constitution for all Germany. After long debate it offered the crown of a united Germany to King Frederick William IV of Prussia. He refused. He would not take a crown from an assembly of commoners, and he would not break with the other German princes. The assembly had no army of its own, and it was scattered in 1849.</p>
 <p style="margin:0 0 14px;">The revolutions failed because the revolutionaries disagreed among themselves. Liberals feared the workers, nationalists quarreled with other nationalists, and the old armies stayed loyal to their rulers. Austria, with help from Russia, crushed the Hungarians. In France the voters chose Louis-Napoleon Bonaparte, a nephew of the emperor, as president in December 1848, and he made himself emperor four years later. A later German leader would draw a lesson from all this. The great questions of the day, he said, would not be decided by speeches and votes. You will meet him in the next lesson.</p>
 </div>
@@ -396,6 +433,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

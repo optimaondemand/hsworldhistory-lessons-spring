@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -312,6 +343,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE SCRAMBLE FOR AFRICA</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">In 1870 most European posts in Africa were on the coast. The French held Algeria. Dutch-descended farmers, called Boers, and the British lived in the south. Then explorers such as David Livingstone and Henry Morton Stanley opened the interior to Europe's imagination. King Leopold II of Belgium sent Stanley back to the Congo basin, and in 1884 Leopold claimed it through a private association.</p>
+<div class="optima-widget ow-reflect" data-wid="w30-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Europeans had steamships, the telegraph, medicine, and better guns. But why go at all? Which motive would you have found hardest to wave away in 1880? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Trade was one reason. Keep it on your list of evidence for the discussion.">Merchants wanting markets and raw materials</button><button data-response="This grew stronger after Germany and Italy appeared as new powers.">Governments wanting naval bases and prestige</button><button data-response="Some of them wanted to spread the Gospel and to end the slave trade that still operated in East Africa.">Missionaries and humanitarians wanting to end the slave trade</button><button data-response="A fair answer. That is what the discussion is for, and the lesson asks you to keep a list of evidence for each motive.">I would need more evidence</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Fearing a quarrel, the great powers met in Berlin in 1884 and 1885 at the invitation of Bismarck. No Africans took part. The conference decided that a power could claim land if it truly occupied it, and it recognized Leopold's Congo Free State. After that, the rush was on. Within twenty years the powers, following lines drawn on maps in Europe, had divided the continent. These lines often cut across peoples and joined enemies in a single colony. Leopold's rule in the Congo was especially harsh. Agents forced villagers to collect rubber under threat of violence, and reports by missionaries and a British shipping clerk, Edmund Morel, produced a public outcry. In 1908 the Belgian government took the Congo from the king.</p>
 </div>
     </div>
@@ -321,6 +354,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="margin:0 0 14px;">Africans did not simply give way. At Isandlwana in 1879 a Zulu army wiped out a British column, though the British won the war that year. In Sudan, a religious leader called the Mahdi overthrew Egyptian rule and killed General Charles Gordon at Khartoum in 1885. Britain avenged him in 1898, when Lord Kitchener's army, using Maxim guns, destroyed the Mahdist army at Omdurman while losing few men. Soon afterward, a French expedition reached the Nile at Fashoda, and Britain and France came close to war before France backed down.</p>
 <p style="margin:0 0 14px;">Britain had occupied Egypt in 1882 to protect the Suez Canal, making Egypt a <span class="gloss" tabindex="0"><strong>protectorate</strong><button class="gloss-audio" onclick="speakGloss(event,'pruh-TEK-ter-it')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">pruh-TEK-ter-it</span>A land that keeps its own rulers on paper but is controlled in foreign affairs by a stronger nation. <a class="om-maplink" href="#gloss-protectorate">See the glossary box.</a></span></span> in everything but name. In the south, Cecil Rhodes dreamed of a railway from the Cape to Cairo. His agents pushed north, and a quarrel over the gold of the Transvaal led to the Boer War of 1899 to 1902, which Britain won only at great cost. The most striking African success was Ethiopia. Its emperor, Menelik II, bought modern rifles and trained his army, and in 1896 he crushed an Italian invasion at Adwa. Ethiopia and Liberia were the only African lands to keep their independence.</p>
 <p style="margin:0 0 14px;">Not every African ruler chose to fight. Some signed treaties, hoping to use European help against their rivals, and some, such as the kings of Buganda, played one European power against another. Many Africans served the new governments as soldiers, clerks, interpreters, and guides, and Africans did most of the actual work of building the roads and railways.</p>
+<div class="ow-group" data-wid="w30-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What happened at Isandlwana in 1879?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A Zulu army wiped out a British column, though the British won the war that year.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How did Ethiopia keep its independence?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Menelik II bought modern rifles and trained his army, and in 1896 he crushed an Italian invasion at Adwa.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did some African rulers sign treaties with Europeans?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">They hoped to use European help against their rivals. Some, such as the kings of Buganda, played one European power against another.</div></div><button class="widget-reset">Reset</button></div></div>
+
 </div>
     </div>
 <div style="background: #EEF1F8; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -346,6 +381,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">RULING INDIA</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">A viceroy in Calcutta, answering to London, led the government. A small Indian Civil Service of a few thousand Britons ran the districts, aided by a large Indian staff and by an army of Indians. About a third of India was ruled indirectly through hundreds of princes. The British built railways, irrigation canals, telegraph lines, schools, and courts. Thousands of Indians studied English and the law, and some of them began to ask why Britons spoke so well of liberty yet kept it from India. In 1885 educated Indians founded the Indian National Congress, which at first asked only for a greater share in the government.</p>
+<div class="optima-widget ow-select" data-wid="w30-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; INDIA</div><div class="widget-question">Check how Britain came to rule India.</div><div class="widget-row" data-correct="0" data-fb="The Company came to dominate Bengal after Plassey in 1757 and took more territory partly by war and partly by treaty with Indian princes. Most of its soldiers were Indians under British officers." data-hint="The Company was a trading firm with an army of its own."><div class="widget-row-prompt">1. How did the British East India Company come to control much of India?</div><div class="widget-options"><button data-choice="0">By war and treaties, with an army of Indian soldiers under British officers</button><button data-choice="1">By orders sent from Parliament and the Crown from the start</button><button data-choice="2">By gifts to the princes, which bought their loyalty without any fighting</button><button data-choice="3">By the telegraph, which let London rule Bengal within hours</button></div></div><div class="widget-row" data-correct="2" data-fb="After the revolt of 1857 Parliament abolished the Company and put India under the Crown." data-hint="Think about who held power before 1858 and who held it after."><div class="widget-row-prompt">2. What did Parliament do after the revolt of 1857?</div><div class="widget-options"><button data-choice="0">It gave the princes of India their independence.</button><button data-choice="1">It left the Company in charge but added inspectors.</button><button data-choice="2">It ended the Company and put India under the Crown.</button><button data-choice="3">It moved the capital of India to London.</button></div></div><div class="widget-row" data-correct="3" data-fb="Educated Indians founded the Congress in 1885, and at first it asked only for a greater share in the government." data-hint="It began as a request, not a demand to rule."><div class="widget-row-prompt">3. What did the Indian National Congress ask for when it was founded in 1885?</div><div class="widget-options"><button data-choice="0">Immediate independence from Britain</button><button data-choice="1">An end to the new railways and telegraphs</button><button data-choice="2">The return of the old Company&#x27;s rule</button><button data-choice="3">A greater share in the government</button></div></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">Yet the Raj also faced hard limits. Famines in the 1870s and 1890s killed millions, and the government's relief was slow and arguable. Indian cotton makers suffered from cheap factory cloth shipped from Lancashire. Still, the Raj kept order in a land that had often known disorder, and it ruled with remarkably few British officials. By 1900 India had more than twenty-five thousand miles of railway, and Indian soldiers and Indian money also served Britain's wars in Asia and Africa. Whether that was a help or a harm to India, its people debated for generations. In the next lesson you will see how two ancient Asian civilizations met the same forces, and why they met them so differently.</p>
 </div>
     </div>
@@ -381,6 +418,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

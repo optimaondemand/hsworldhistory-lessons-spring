@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -317,6 +348,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Coal alone was not enough, since other countries had coal too. Britain also had a settled government. After 1688 Parliament and the courts protected property, so an investor could expect to keep what he earned. There were no tolls or tariffs between English towns, and rivers, the coast, and new canals made it cheap to move heavy goods. The Bridgewater Canal, opened in 1761, cut the price of coal in Manchester almost in half.</p>
 <p style="margin:0 0 14px;">Merchants and landowners had savings, and banks put that <span class="gloss" tabindex="0"><strong>capital</strong><button class="gloss-audio" onclick="speakGloss(event,'KAP-ih-tul')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KAP-ih-tul</span>Money, tools, and buildings that are used to produce more wealth rather than spent right away. <a class="om-maplink" href="#gloss-capital">See the glossary box.</a></span></span> to work. Landlords had carried out <span class="gloss" tabindex="0"><strong>enclosure</strong><button class="gloss-audio" onclick="speakGloss(event,'en-KLOH-zher')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">en-KLOH-zher</span>The fencing off of shared farmland and pasture so that it became the private property of one owner. <a class="om-maplink" href="#gloss-enclosure">See the glossary box.</a></span></span>, fencing common fields into larger farms that produced more food with fewer hands. Some of the families who no longer had farm work moved to towns. Britain also had a large navy and an overseas empire, which gave its merchants markets and supplies of raw material. And it had a great many skilled craftsmen: clockmakers, mill builders, instrument makers, and blacksmiths who liked to tinker and improve.</p>
+<div class="optima-widget ow-reflect" data-wid="w28-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Britain had cheap coal, high wages, steady laws, canals, savings, and skilled craftsmen. If you were an investor in 1750, which would you have trusted most? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Together they made a machine that saved labor and burned coal a good bargain. Nobody planned it; people answered the prices in front of them.">Cheap coal and high wages</button><button data-response="After 1688 Parliament and the courts protected property, so an investor could expect to keep what he earned.">Laws that protected property</button><button data-response="The Bridgewater Canal, opened in 1761, cut the price of coal in Manchester almost in half.">Canals and cheap carrying</button><button data-response="Clockmakers, mill builders, and blacksmiths who liked to improve things mattered too. And none of these advantages made the outcome certain.">Skilled craftsmen who liked to tinker</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">None of this made the outcome certain. A different civil war, a ruined government, or a few inventors who gave up might have sent the island in another direction. Industrialization began in Britain because many separate things happened to be true there at once, and because particular people seized the chance.</p>
 </div>
     </div>
@@ -325,6 +358,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Coal mines had a constant problem: water seeped in and flooded the shafts. In 1712 Thomas Newcomen built an engine that used steam to pump water out. It swallowed huge amounts of coal, but that hardly mattered at a coal mine, where fuel was nearly free.</p>
 <p style="margin:0 0 14px;">James Watt, a Scottish instrument maker, was asked to repair a small model of a Newcomen engine. He saw how much heat was wasted by heating and cooling the same cylinder over and over. In 1769 he patented a separate condenser that fixed the problem and used far less coal. Watt was no businessman, and he nearly gave up. Matthew Boulton, a Birmingham manufacturer, provided the money and the workshop, and in 1775 the two became partners. Within a few years their engines could turn a wheel, not just pump a shaft. For the first time, a factory did not have to sit beside a fast river. It could stand anywhere a cart of coal could reach.</p>
+<div class="ow-group" data-wid="w28-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What problem did James Watt see in the Newcomen engine?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Heating and cooling the same cylinder over and over wasted heat. His separate condenser fixed that and used far less coal.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did Watt need Matthew Boulton?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Watt was no businessman and nearly gave up. Boulton, a Birmingham manufacturer, provided the money and the workshop, and they became partners in 1775.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the improved engine change about where a mill could stand?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A mill no longer had to sit beside a fast river. It could stand anywhere a cart of coal could reach.</div></div><button class="widget-reset">Reset</button></div></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -339,6 +374,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">Machines needed iron, and iron needed fuel. Smelters had burned charcoal, which meant cutting forests. In 1709 Abraham Darby at Coalbrookdale learned to smelt iron with coke, a fuel baked from coal. In the 1780s Henry Cort's puddling process made tough wrought iron in large amounts. Iron went into engines, tools, ships, and the world's first iron bridge, built over the Severn in 1779.</p>
 <p style="margin:0 0 14px;">Then came the railway. George Stephenson's locomotive, the Rocket, won a famous trial at Rainhill in 1829. In 1830 the Liverpool and Manchester Railway opened, and carried passengers and cotton at speeds no horse could match. A trip that once took a day by coach took a couple of hours. Within twenty years, thousands of miles of track crossed Britain.</p>
+<div class="optima-widget ow-select" data-wid="w28-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; FROM COTTON TO RAILS</div><div class="widget-question">Check what drove each change.</div><div class="widget-row" data-correct="3" data-fb="A spinner at a wheel made one thread at a time, and weavers often stood idle waiting for yarn." data-hint="Think about who was waiting for whom."><div class="widget-row-prompt">1. James Hargreaves, Richard Arkwright, and Samuel Crompton were all attacking one bottleneck. What was it?</div><div class="widget-options"><button data-choice="0">Raw cotton cost too much to bring from India.</button><button data-choice="1">Ships could not carry enough cotton to Lancashire.</button><button data-choice="2">Britain was running short of wool.</button><button data-choice="3">Spinners made one thread at a time, so weavers often stood idle.</button></div></div><div class="widget-row" data-correct="1" data-fb="Smelters had burned charcoal, which meant cutting forests. Coke, baked from coal, gave them another fuel." data-hint="Machines needed iron, and iron needed fuel. Which fuel was the problem?"><div class="widget-row-prompt">2. Why did Abraham Darby's use of coke matter for iron?</div><div class="widget-options"><button data-choice="0">It made iron cheap enough to sell in India.</button><button data-choice="1">It let smelters stop burning charcoal, and so stop cutting forests.</button><button data-choice="2">It let the Rocket pull heavier loads.</button><button data-choice="3">It removed the need for coal mines.</button></div></div><div class="widget-row" data-correct="2" data-fb="The line carried passengers and cotton at speeds no horse could match." data-hint="Think about what the line carried and how fast."><div class="widget-row-prompt">3. What did the Liverpool and Manchester Railway show in 1830?</div><div class="widget-options"><button data-choice="0">Coaches were still faster over short trips.</button><button data-choice="1">Only passengers, not goods, could use the new line.</button><button data-choice="2">It could carry passengers and cotton faster than any horse.</button><button data-choice="3">It was built mainly to carry coal to the mines.</button></div></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -380,6 +417,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>

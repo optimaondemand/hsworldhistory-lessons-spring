@@ -8,6 +8,37 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -313,6 +344,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">In 1796 he took over a ragged army and told the soldiers they would find glory and wealth if they followed him. He moved fast, struck the divided enemy armies one by one, and won a series of victories at Lodi, Arcole, and Rivoli. In 1797 he forced Austria to sign a peace, and he negotiated the terms himself. He was already acting like a ruler. Newspapers he supported made him famous in Paris.</p>
 <p style="margin:0 0 14px;">Notice what kind of leader he was. He slept little, remembered the names of soldiers, and worked out the details of supply and marching himself. His men followed him because he won, and because he promised that a soldier could rise as far as his talent would carry him. Many of his marshals had been sergeants or sons of innkeepers. That promise tied the army to him more than it tied it to any government.</p>
+<div class="optima-widget ow-reflect" data-wid="w27-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Napoleon promised that a soldier could rise as far as his talent would carry him. Which part of that promise would have pulled at you most? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="For his marshals the promise was real, since many had been sergeants or sons of innkeepers. It also tied the army to him more than to any government.">The chance to rise from humble birth</button><button data-response="Victory was a large part of his hold. His men followed him because he won.">Following a leader who kept winning</button><button data-response="He slept little, remembered the names of soldiers, and worked out the details of supply and marching himself. That kind of care can earn deep loyalty.">A commander who knew soldiers by name and handled supply himself</button><button data-response="A sharp question. The lesson says the promise tied the army to Napoleon more than to any government.">I would wonder where the army&#x27;s loyalty belonged</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
+
 <p style="margin:0 0 14px;">In 1798 he led an army to Egypt, hoping to threaten Britain's road to India. He won on land at the Battle of the Pyramids, but the British admiral Horatio Nelson destroyed his fleet at the Nile, which stranded the army. Scholars who traveled with him studied Egypt's ruins, and soldiers found the Rosetta Stone, which later let scholars read hieroglyphs. In 1799 Napoleon left his army behind and slipped back to France.</p>
 </div>
     </div>
@@ -321,6 +354,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">He found the Directory in trouble. It was unpopular, corrupt, and short of money, and it had lost battles in his absence. One of its members was Sieyès, the writer of the pamphlet about the Third Estate. He wanted to change the constitution and needed a general with an army. On November 9, 1799, they carried out a <span class="gloss" tabindex="0"><em>coup d'état</em><button class="gloss-audio" onclick="speakGloss(event,'KOO day-TAH')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KOO day-TAH</span>A French phrase meaning "a blow against the state." It is a sudden seizure of power by a small group, usually with the help of soldiers. <a class="om-maplink" href="#gloss-coup-d-etat">See the glossary box.</a></span></span>. The next day Napoleon went to the councils at Saint-Cloud to ask for their support, and nearly lost everything. Deputies shouted "Outlaw!" at him, and he is said to have lost his composure. His brother Lucien, who was the president of one of the councils, ran out and told the soldiers that deputies had tried to stab the general. The troops cleared the hall.</p>
 <p style="margin:0 0 14px;">Think about how narrow this was. A few steadier nerves in the hall, or a few less loyal soldiers outside, and Napoleon might have been an exile or a prisoner. Instead he became First Consul. A new constitution gave him almost all the power, and a <span class="gloss" tabindex="0"><strong>plebiscite</strong><button class="gloss-audio" onclick="speakGloss(event,'PLEB-ih-syt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">PLEB-ih-syt</span>A vote in which all citizens say yes or no to a single proposal. <a class="om-maplink" href="#gloss-plebiscite">See the glossary box.</a></span></span> approved it by a huge, though doubtful, margin.</p>
+<div class="optima-widget ow-select" data-wid="w27-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; BRUMAIRE</div><div class="widget-question">Check your reading of the seizure of power in 1799.</div><div class="widget-row" data-correct="2" data-fb="Sieyès wanted to change the constitution, and a general with an army could make that possible." data-hint="Think about what Sieyès wanted done, and who could make it stick."><div class="widget-row-prompt">1. Why did Sieyès turn to Napoleon in 1799?</div><div class="widget-options"><button data-choice="0">He wanted a general to lead the Directory&#x27;s armies against Austria.</button><button data-choice="1">He wanted a general whose speeches would win over the councils.</button><button data-choice="2">He wanted to change the constitution and needed a general with an army.</button><button data-choice="3">He wanted a general to put down the royalists rising in Paris.</button></div></div><div class="widget-row" data-correct="3" data-fb="Lucien, who was the president of one of the councils, told the soldiers the deputies had tried to stab the general, and the troops cleared the hall." data-hint="The deputies were shouting. Who acted next, and on whose word?"><div class="widget-row-prompt">2. What turned the near failure at Saint-Cloud around?</div><div class="widget-options"><button data-choice="0">Napoleon calmed the deputies with a long speech.</button><button data-choice="1">The deputies voted to hand him the power he asked for.</button><button data-choice="2">The Directory&#x27;s own guards arrested the deputies who shouted at him.</button><button data-choice="3">His brother Lucien told the soldiers that deputies had tried to stab the general.</button></div></div><div class="widget-row" data-correct="1,3" data-fb="Both fit the lesson. A few steadier nerves in the hall, or a few less loyal soldiers outside, and Napoleon might have been an exile or a prisoner." data-hint="Look at who was in the hall and who was outside it."><div class="widget-row-prompt">3. Which of these, had it gone differently that day, could have ended his rise?</div><div class="widget-options"><button data-choice="0">A treaty with Britain signed that morning</button><button data-choice="1">Soldiers outside the hall who were less loyal</button><button data-choice="2">A better plan for supplying the army in Italy</button><button data-choice="3">Deputies with steadier nerves</button></div></div><button class="widget-reset">Reset</button></div>
+
 </div>
     </div>
 <div style="background: #EEF1F8; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -342,6 +377,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">EMPEROR OF THE FRENCH</div>
         <div style="font-size:17px; color:#1a2340; line-height:1.7;">
 <p style="margin:0 0 14px;">In 1802 another plebiscite made him consul for life. In 1804 a third approved a new title for him, Emperor of the French. At his coronation in Notre-Dame, on December 2, 1804, Pope Pius VII was present, but Napoleon placed the crown on his own head. The republic of virtue was gone. It had been replaced by a regime that depended on the will and talent of one man, which is what Polybius would have expected to see. The Romans had seen their own republic end in the same way, with Caesar.</p>
+<div class="ow-group" data-wid="w27-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the new Legion of Honor reward?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It rewarded merit rather than birth, in a France where careers were now open to talent.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How did Napoleon&#x27;s government treat the press and elections?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Newspapers were censored, a secret police watched for plots, and elections became formalities.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Who placed the crown on Napoleon&#x27;s head in 1804?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Napoleon placed it on his own head, with Pope Pius VII present.</div></div><button class="widget-reset">Reset</button></div></div>
+
 </div>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -383,6 +420,78 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 
 </script>
 </body>
