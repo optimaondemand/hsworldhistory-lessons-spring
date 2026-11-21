@@ -720,6 +720,110 @@ body:has(.drawer.open) .fab{display:none}
 <section class="step" data-step="0">
   <div class="arrive2">
   <div class="intro">
+<div id="optima-read-aloud" data-ra-skip class="ora" role="group" aria-label="Read this lesson aloud">
+<style>
+.ora{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--terra);border-radius:10px;padding:12px 16px;margin:0 0 14px}
+.ora .ora-kicker{font:700 11px/1 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d);margin-bottom:10px}
+.ora .ora-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ora .ora-controls button{border-radius:8px;padding:8px 16px;font:600 14px system-ui,sans-serif;cursor:pointer;min-height:40px}
+.ora #ora-play{background:var(--navy);color:#fff;border:1.5px solid var(--navy)}
+.ora #ora-play:disabled{opacity:.55;cursor:default}
+.ora #ora-stop{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.ora #ora-stop:disabled{opacity:.55;cursor:default}
+.ora .ora-speed{font:12px system-ui,sans-serif;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.ora #ora-rate{font:13px system-ui,sans-serif;color:var(--ink);border:1.5px solid var(--line);border-radius:6px;padding:5px 8px;background:#fff}
+.ora #ora-status{font:12px system-ui,sans-serif;color:var(--ink2)}
+</style>
+<div class="ora-kicker">&#128266; Read aloud: listen to this lesson</div>
+<div class="ora-controls">
+<button id="ora-play" type="button" aria-label="Listen to this lesson">&#9654;&#65039; Listen</button>
+<button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+<label class="ora-speed">Speed
+<select id="ora-rate" aria-label="Reading speed"><option value="0.8">Slower</option><option value="1" selected>Normal</option><option value="1.25">Faster</option></select>
+</label>
+<span id="ora-status" role="status" aria-live="polite"></span>
+</div>
+<script>
+(function () {
+  "use strict";
+  var playBtn = document.getElementById("ora-play"), stopBtn = document.getElementById("ora-stop"),
+      rateSel = document.getElementById("ora-rate"), statusEl = document.getElementById("ora-status");
+  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+    playBtn.disabled = true; rateSel.disabled = true;
+    statusEl.textContent = "Read-aloud is not supported in this browser.";
+    return;
+  }
+  var LABEL_PLAY = "▶️ Listen", LABEL_PAUSE = "⏸️ Pause", LABEL_RESUME = "▶️ Resume";
+  var queue = [], idx = 0, playing = false, paused = false, stopping = false, currentUtterance = null;
+  var voices = [];
+  function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+  loadVoices();
+  if ("onvoiceschanged" in window.speechSynthesis) window.speechSynthesis.onvoiceschanged = loadVoices;
+  function pickVoice() {
+    if (!voices.length) loadVoices();
+    var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+    return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+        || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+        || en.filter(function (v) { return v.default; })[0] || en[0] || null;
+  }
+  function textOf(el) {
+    var c = el.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll("button, .pp, script, style"), function (n) { n.remove(); });
+    return c.textContent.replace(/\s+/g, " ").trim();
+  }
+  // The book's own text, in order: lesson title, then each chapter heading and paragraph (documents too).
+  function collectQueue() {
+    var q = [], t = document.querySelector(".hero h1");
+    function add(s) {
+      var sentences = s.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [s];
+      sentences.forEach(function (x) { x = x.trim(); if (x) q.push(x); });
+    }
+    if (t && textOf(t)) add(textOf(t) + ".");
+    Array.prototype.forEach.call(document.querySelectorAll("#flow h3, #flow p.prose, #flow .doccite"), function (el) {
+      var s = textOf(el);
+      if (!s) return;
+      if (el.tagName === "H3" && !/[.!?]$/.test(s)) s += ".";
+      add(s);
+    });
+    return q;
+  }
+  function speakNext() {
+    if (idx >= queue.length) { finish("Finished reading this lesson."); return; }
+    var u = new SpeechSynthesisUtterance(queue[idx]);
+    u.rate = parseFloat(rateSel.value) || 1;
+    var v = pickVoice(); if (v) u.voice = v;
+    u.onend = function () { if (stopping) return; idx++; speakNext(); };
+    u.onerror = function (e) { if (stopping || e.error === "canceled" || e.error === "interrupted") return; idx++; speakNext(); };
+    currentUtterance = u;
+    window.speechSynthesis.speak(u);
+    statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+  }
+  function finish(message) {
+    playing = false; paused = false;
+    playBtn.textContent = LABEL_PLAY; stopBtn.disabled = true;
+    statusEl.textContent = message || ""; currentUtterance = null;
+  }
+  playBtn.addEventListener("click", function () {
+    if (playing && !paused) { window.speechSynthesis.pause(); paused = true; playBtn.textContent = LABEL_RESUME; statusEl.textContent = "Paused"; return; }
+    if (playing && paused) { window.speechSynthesis.resume(); paused = false; playBtn.textContent = LABEL_PAUSE; statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length; return; }
+    queue = collectQueue();
+    if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+    idx = 0; stopping = false; playing = true; paused = false;
+    window.speechSynthesis.cancel();
+    playBtn.textContent = LABEL_PAUSE; stopBtn.disabled = false;
+    speakNext();
+  });
+  stopBtn.addEventListener("click", function () { stopping = true; window.speechSynthesis.cancel(); finish(""); });
+  rateSel.addEventListener("change", function () {
+    if (!playing || paused) return;
+    stopping = true; window.speechSynthesis.cancel();
+    setTimeout(function () { stopping = false; speakNext(); }, 60);
+  });
+  window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- END READ-ALOUD PLAYER -->
   <div class="minis">
   <div class="ml" data-mini="mini1">
     <div class="ml-head"><img src="img/magister.jpg" alt="Mr. Magister"><div><div class="label">Mini-lesson · Mr. Magister</div><h3>Gunboats and Two Answers</h3></div><button class="btn small ml-play">&#9654; Play</button></div>
